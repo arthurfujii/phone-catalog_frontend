@@ -1,0 +1,99 @@
+.productDetailsMain {
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include on-tablet {
+    grid-column: 8 / span 5;
+    grid-row: 1;
+  }
+
+  @include on-desktop {
+    grid-column: 14 / span 7;
+    grid-row: 1;
+  }
+
+  h2 {
+    grid-column: 1/-1;
+  }
+
+  &__colors {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+
+    &-text {
+      color: $c-secondary;
+    }
+    &-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $c-white;
+      &-bg {
+        margin: 0;
+        padding: 0;
+        border: 1px solid $c-elements;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        transition: all $transition-duration;
+        &--selected, &:hover {
+          border: 1px solid $c-primary;
+        }
+      }
+    }
+    &-button-container {
+      grid-column: 1/-1;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+    }
+  }
+  &__capacity {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &-text {
+      color: $c-secondary;
+    }
+    &-container {
+      display: flex;
+      flex-direction: row;
+      height: 32px;
+      gap: 8px;
+    }
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $c-primary;
+      background: $c-white;
+      border: 1px solid $c-icons;
+      height: 100%;
+      width: auto;
+      padding-inline: 8px;
+      transition: all $transition-duration;
+      &--selected,
+      &:hover {
+        color: $c-white;
+        background: $c-primary;
+      }
+    }
+  }
+  &__price {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-block: 8px;
+  }
+}

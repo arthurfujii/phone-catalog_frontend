@@ -1,0 +1,10 @@
+.cart-page {
+  &__link {
+    text-decoration: none;
+  }
+
+  padding-block: 24px;
+
+  @include grid-page;
+  @include inline-padding;
+}

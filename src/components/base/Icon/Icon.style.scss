@@ -1,0 +1,147 @@
+.icon {
+  cursor: pointer;
+  &__wrapper {
+    position: relative;
+  }
+  &__content {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    height: 13px;
+    width: 13px;
+    top: 21%;
+    right: 22%;
+    color: $c-white;
+    font-family: Mont, sans-serif;
+    font-size: 0.4rem;
+
+    @include on-desktop {
+      top: 28%;
+      right: 29%;
+    }
+  }
+
+  &--bar {
+    height: 48px;
+    width: 48px;
+    &-border {
+      box-shadow: -1px 0 0 0 $c-elements;
+    }
+
+    @include on-desktop {
+      height: 64px;
+      width: 64px;
+    }
+  }
+
+  &--button {
+    &-border {
+      border: 1px solid $c-icons;
+      &-disabled {
+        border: 1px solid $c-elements;
+      }
+    }
+    &-16 {
+      height: 16px;
+      width: 16px;
+    }
+    &-32 {
+      height: 32px;
+      width: 32px;
+    }
+    &-40 {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  &--menu-page {
+    width: 100%;
+    height: 64px;
+    box-shadow: -1px -1px 0 0 $c-elements;
+    position: relative;
+    &:hover::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      bottom: 0;
+      background: $c-primary;
+    }
+  }
+
+  &--menu {
+    background: url('../../../..' + $baseIconPath + 'menu.svg') no-repeat center;
+  }
+
+  &--favorite {
+    background: url('../../../..' + $baseIconPath + 'heart.svg') no-repeat center;
+    &-added {
+      background: url('../../../..' + $baseIconPath + 'heart-filled.svg') no-repeat
+        center;
+    }
+    &-counter {
+      background: url('../../../..' + $baseIconPath + 'heart-counter.svg')
+        no-repeat center;
+    }
+  }
+
+  &--cart {
+    background: url('../../../..' + $baseIconPath + 'cart.svg') no-repeat center;
+    &-counter {
+      background: url('../../../..' + $baseIconPath + 'cart-counter.svg') no-repeat
+        center;
+    }
+  }
+
+  &--close {
+    background: url('../../../..' + $baseIconPath + 'close.svg') no-repeat center;
+  }
+
+  &--chevron-left {
+    background: url('../../../..' + $baseIconPath + 'chevron-left.svg') no-repeat
+      center;
+    &-disabled {
+      background: url('../../../..' + $baseIconPath + 'chevron-left-disabled.svg')
+        no-repeat center;
+    }
+  }
+
+  &--chevron-right {
+    background: url('../../../..' + $baseIconPath + 'chevron-right.svg') no-repeat
+      center;
+    &-disabled {
+      background: url('../../../..' + $baseIconPath + 'chevron-right-disabled.svg')
+        no-repeat center;
+    }
+  }
+
+  &--chevron-up {
+    background: url('../../../..' + $baseIconPath + 'chevron-up.svg') no-repeat
+      center;
+  }
+
+  &--home {
+    background: url('../../../..' + $baseIconPath + 'home.svg') no-repeat center;
+    &-disabled {
+      background: url('../../../..' + $baseIconPath + 'home-disabled.svg')
+        no-repeat center;
+    }
+  }
+
+  &--minus {
+    background: url('../../../..' + $baseIconPath + 'minus.svg') no-repeat center;
+    &-disabled {
+      background: url('../../../..' + $baseIconPath + 'minus-disabled.svg')
+        no-repeat center;
+    }
+  }
+
+  &--plus {
+    background: url('../../../..' + $baseIconPath + 'plus.svg') no-repeat center;
+    &-disabled {
+      background: url('../../../..' + $baseIconPath + 'plus-disabled.svg')
+        no-repeat center;
+    }
+  }
+}
