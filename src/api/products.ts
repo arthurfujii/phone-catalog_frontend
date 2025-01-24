@@ -3,7 +3,7 @@ import { Product } from '../types/Product';
 import { Category } from '../types/Category';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:3005',
+  baseURL: 'http://vps56607.publiccloud.com.br:3005',
   timeout: 10000,
 });
 

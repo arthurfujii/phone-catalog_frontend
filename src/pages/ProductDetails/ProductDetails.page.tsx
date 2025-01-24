@@ -54,8 +54,6 @@ export const ProductDetailsPage = () => {
     });
   }, [selectedProduct]);
 
-  console.log(category, isReady, selectedProduct);
-
   if (category && isReady && selectedProduct) {
     return (
       <div className="productDetails-page">
